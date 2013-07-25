@@ -25,12 +25,6 @@
 	// Do any additional setup after loading the view, typically from a nib.
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
@@ -55,6 +49,11 @@
     self.dataImage.image = [UIImage imageNamed:self.dataObject];
     self.labelOne.attributedText = attString;
     
+}
+
+- (void)viewDidDisappear:(BOOL)animated
+{
+    [self.paragraph1 stop];
 }
 
 /*******************************************************************************
